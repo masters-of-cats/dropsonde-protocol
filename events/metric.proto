@@ -29,4 +29,5 @@ message CounterEvent {
     required uint64 diskBytes = 5;        /// Bytes of disk used.
     optional uint64 memoryBytesQuota = 6; /// Maximum bytes of memory allocated to container.
     optional uint64 diskBytesQuota = 7;   /// Maximum bytes of disk allocated to container.
+    optional double cpuPercentageWeighted = 8;
  }
