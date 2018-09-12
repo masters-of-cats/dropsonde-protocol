@@ -30,3 +30,11 @@ message CounterEvent {
     optional uint64 memoryBytesQuota = 6; /// Maximum bytes of memory allocated to container.
     optional uint64 diskBytesQuota = 7;   /// Maximum bytes of disk allocated to container.
  }
+
+/// A CPUUsage records the CPU usage of an app in a container against its CPU entitlement
+message CPUUsage {
+    required string applicationId = 1; /// ID of the contained application.
+    required uint64 absoluteCpuUsage = 2; /// CPU nanoseconds that the container used since its start (a.k.a the  <cgroups>/cpuacct/cpuacct.usage)
+    required uint64 absoluteCpuEntitlement = 3; /// CPU nanoseconds the container has been entitled to since creation
+    required uint64 containerAge = 4; /// Container age in nanoseconds
+}
