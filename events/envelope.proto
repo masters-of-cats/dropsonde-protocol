@@ -44,5 +44,6 @@ message Envelope {
     optional CounterEvent counterEvent = 10;
     optional Error error = 11;
     optional ContainerMetric containerMetric = 12;
+    optional CPUUsage cpuUsage = 18;
 }
 
