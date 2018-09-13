@@ -20,7 +20,7 @@ message Envelope {
         CounterEvent = 7;
         Error = 8;
         ContainerMetric = 9;
-        CPUUsage = 10;
+        ContainerCPUUsage = 10;
     }
 
     required string origin = 1;               /// Unique description of the origin of this event.
@@ -44,6 +44,6 @@ message Envelope {
     optional CounterEvent counterEvent = 10;
     optional Error error = 11;
     optional ContainerMetric containerMetric = 12;
-    optional CPUUsage cpuUsage = 18;
+    optional ContainerCPUUsage containerCPUUsage = 18;
 }
 
